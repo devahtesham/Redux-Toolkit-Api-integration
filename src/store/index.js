@@ -1,6 +1,11 @@
-import { applyMiddleware, createStore } from "redux";
-import thunk from "redux-thunk";
-import Combine from "./Reducers/CombineReducer";
+import { configureStore } from "@reduxjs/toolkit";
+import { CartSliceReducer } from "./CartSlice";
+import { ProductsSliceReducer } from "./ProductSlice";
 
-const store = createStore(Combine, {}, applyMiddleware(thunk));
+const store = configureStore({
+  reducer: {
+    cart: CartSliceReducer,
+    products: ProductsSliceReducer,
+  },
+});
 export default store;

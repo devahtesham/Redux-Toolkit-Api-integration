@@ -1,6 +1,6 @@
 import React from "react";
 import Router from "../../Router/Router";
-import Footer from "../Footer/Footer";
+
 import Header from "../Header/Header";
 
 const Layout = () => {
@@ -8,7 +8,6 @@ const Layout = () => {
     <>
       <Header />
       <Router />
-      <Footer />
     </>
   );
 };
